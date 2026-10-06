@@ -1,0 +1,55 @@
+{
+  "name": "custom-clan-death",
+  "version": "1.0.1",
+  "description": "Отправляет кастомные сообщения в клан-чат при смерти определенных игроков.",
+  "main": "index.js",
+  "author": "Amnesia",
+  "botpanel": {
+    "icon": "Skull",
+    "categories": [
+      "Чат",
+      "Автоматизация"
+    ],
+    "dependencies": {
+      "parser-keksik": "*"
+    },
+    "settings": {
+      "customMessages": {
+        "type": "json_file",
+        "label": "Список сообщений (Ник: Сообщение)",
+        "defaultPath": "config/messages.json"
+      },
+      "deathPatterns": {
+        "type": "string[]",
+        "label": "Паттерны смерти (Regex)",
+        "default": [
+          "(\\w+) умер",
+          "(\\w+) пал от руки",
+          "(\\w+) разбился",
+          "(\\w+) сгорел",
+          "(\\w+) утонул",
+          "(\\w+) покинул этот мир",
+          "(\\w+) был убит",
+          "(\\w+) совершил суицид",
+          "^(\\w+) покончил жизнь самоубийством."
+        ]
+      },
+      "ignoreCase": {
+        "type": "boolean",
+        "label": "Игнорировать регистр ников",
+        "default": true
+      }
+    },
+    "displayName": "custom-clan-death"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krok98842-ux/custom-clan-death"
+  },
+  "keywords": [
+    "blockmine",
+    "blockmine-plugin",
+    "minecraft",
+    "mineflayer"
+  ]
+}
